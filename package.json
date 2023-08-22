@@ -1,0 +1,20 @@
+{
+  "name": "product-calculator-back",
+  "version": "1.0.0",
+  "description": "Products and services calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnk531/product-calculator-back.git"
+  },
+  "author": "JohnKSS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnk531/product-calculator-back/issues"
+  },
+  "homepage": "https://github.com/johnk531/product-calculator-back#readme"
+}

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/johnk531/product-calculator-back#readme",
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "mongodb": "^5.8.0"
   }
 }

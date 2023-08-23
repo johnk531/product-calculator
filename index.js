@@ -1,18 +1,44 @@
-const http = require('node:http');
 const dotenv = require("dotenv");
+const express = require('express');
 
+const app = express();
 dotenv.config();
 
 const connectToDatabase = require("./src/database/connect");
-
 connectToDatabase();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, World!\n');
+const router = require("./src/routes");
+
+// forma de ler JSON
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
+
+app.use(express.json());
+
+//static
+app.use('/static', express.static('public'));
+
+//routes
+app.use(router);
+
+// rota inicial / endpoint
+app.get('/', (req, res) => {
+    res.status(200).send("<h1>Product Calculator - Back</h1><p>API for the systema</p>");
 });
 
-server.listen(process.env.SERVER_PORT, process.env.SERVER_HOSTNAME, () => {
-  console.log(`Server running at http://${process.env.SERVER_HOSTNAME}/`);
-});
+// custom 404
+app.use((req, res, next) => {
+    res.status(404).send("Route not found!")
+})
+
+// custom error handler
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).send('Something is broken!')
+})
+
+// entregar uma porta
+app.listen(process.env.SERVER_PORT);

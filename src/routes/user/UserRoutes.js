@@ -12,5 +12,7 @@ router.put("/user/update", UserController.Update);
 router.delete("/user/delete", UserController.Delete);
 //List users
 router.get("/user/list", UserController.List);
+//Signin
+router.get("/user/signin", UserController.signIn);
 
 module.exports = router;

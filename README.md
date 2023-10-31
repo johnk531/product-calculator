@@ -3,9 +3,15 @@ Products and services calculator
 
 # run the command to iniciate aplication
 
-npm install
+Install dependencies
+```bash
+  npm install
+```
 
-npm start
+Start the aplication
+```bash
+  npm start
+```
 
 ## .env 
 
@@ -34,3 +40,8 @@ environment variables to your .env
 `ENCRYPT_SECRET=`
 
 `REACT_APP_TOKEN=`
+
+
+## Stack
+
+**Back-end:** Node, Express

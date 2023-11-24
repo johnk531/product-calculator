@@ -13,6 +13,11 @@ Start the aplication
   npm start
 ```
 
+Test the aplication
+```bash
+  npm test
+```
+
 ## .env 
 
 environment variables to your .env
@@ -44,4 +49,4 @@ environment variables to your .env
 
 ## Stack
 
-**Back-end:** Node, Express
+**Back-end:** Node, Express, Jest, Mongoose

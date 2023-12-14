@@ -7,7 +7,7 @@ const RecipeControllerFunctions = {
             for (let i = 0; i < products.length; i++) {
                 const product = await ProductModel.findOne({ _id : products[i]._id });
                 products[i].nome = product.nome;
-                products[i].valorQtd = RecipeControllerFunctions.ReturnValorQtd(parseInt(product[i].quantidade), parseFloat(product[i].valor));
+                products[i].valorQtd = RecipeControllerFunctions.ReturnValorQtd(parseInt(product[i].quantidade), parseFloat(product[i].valor, parseInt(products[i].qtd)));
             }
             return res.status(200).json(products);
         } catch (error) {

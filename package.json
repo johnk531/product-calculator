@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js --ignore __tests__",
+    "dev": "nodemon server.js --legacy-watch --ignore __tests__",
     "test": "jest"
   },
   "repository": {

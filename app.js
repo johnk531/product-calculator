@@ -47,7 +47,7 @@ class AppController{
 
     routes(){
         this.express.get('/', (req, res) => {
-            res.status(200).send("<h1>Product Calculator - Back</h1><p>API for the systema</p>");
+            res.status(200).send("<h1>Product Calculator - Back</h1><p>API for the system</p>");
         });
         this.express.use(require("./src/routes"));
     }
